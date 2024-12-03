@@ -1,0 +1,231 @@
+/* Style global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem; /* Réduit la taille des polices */
+}
+
+.container {
+    width: 80vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2vh 3vw; /* Ajout d'un espacement plus léger */
+}
+
+h1, h2 {
+    color: #444;
+    margin-bottom: 1.5vh;
+    font-size: 2rem; /* Taille des titres réduite */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2 {
+    margin-bottom: 1.5vh;
+}
+
+/* Header et navigation */
+.navbar {
+    background-color: #003366;
+    padding: 1.5vh 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem; /* Taille des liens réduite */
+}
+
+.navbar .logo {
+    font-size: 1.8rem; /* Taille du logo réduite */
+    font-weight: bold;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-link {
+    margin: 0 1.5vw;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ffd700;
+}
+
+.auth-links, .user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.auth-links a, .user-menu a {
+    margin-left: 1.5vw;
+}
+
+.create-post {
+    background-color: #28a745;
+    padding: 1vh 2vw;
+    border-radius: 0.5rem;
+    font-size: 1rem; /* Réduit la taille du texte */
+}
+
+.create-post:hover {
+    background-color: #218838;
+}
+
+.logout {
+    color: #dc3545;
+}
+
+.logout:hover {
+    color: #c82333;
+}
+
+/* Section des messages */
+.messages {
+    margin: 2vh 0;
+    padding: 2vh;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+.messages .message {
+    margin-bottom: 1vh;
+}
+
+/* Sélecteur de langue */
+.language-selector {
+    position: absolute;
+    top: 2vh;
+    right: 3vw;
+}
+
+.language-selector select {
+    padding: 0.8vh 1.5vw;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+/* Contenu principal */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr)); /* Cartes plus petites */
+    gap: 2vw;
+    margin-top: 3vh;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+    padding: 2vh;
+    transition: transform 0.3s;
+    font-size: 1rem;
+}
+
+.post-card:hover {
+    transform: translateY(-1vh);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem; /* Taille des informations réduite */
+    color: #777;
+}
+
+.post-title {
+    font-size: 1.8rem; /* Taille des titres réduite */
+    margin-top: 1.5vh;
+    color: #003366;
+}
+
+.post-title a {
+    font-weight: bold;
+    color: inherit;
+}
+
+.post-title a:hover {
+    color: #28a745;
+}
+
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+form input, form select, form button {
+    padding: 1.5vh 2vw;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+}
+
+form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+form p {
+    font-size: 1rem;
+}
+
+form p a {
+    color: #003366;
+}
+
+form p a:hover {
+    color: #28a745;
+}
+
+/* Article détaillé */
+article {
+    background-color: white;
+    padding: 2vh;
+    border-radius: 1rem;
+    box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.1);
+    margin-top: 3vh;
+}
+
+article img {
+    max-width: 100%;
+    margin-top: 2vh;
+    border-radius: 1rem;
+}
+
+/* Liens de retour */
+a {
+    color: #003366;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #28a745;
+}

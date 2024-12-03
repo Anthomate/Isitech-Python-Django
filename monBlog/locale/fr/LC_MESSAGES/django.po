@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-03 13:45+0100\n"
+"PO-Revision-Date: 2024-12-03 14:07+0100\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
+
+#: blog/templates/blog/base.html:7 blog/templates/blog/base.html:14
+msgid "Blog"
+msgstr "Blog"
+
+#: blog/templates/blog/base.html:19
+msgid "Home"
+msgstr "Accueil"
+
+#: blog/templates/blog/base.html:20
+msgid "New Post"
+msgstr "Nouveau Post"
+
+#: blog/templates/blog/base.html:21
+msgid "Disconnect"
+msgstr "Déconnexion"
+
+#: blog/templates/blog/base.html:25 blog/templates/blog/login.html:8
+#: blog/templates/blog/register.html:10
+msgid "Login"
+msgstr "Connexion"
+
+#: blog/templates/blog/base.html:26 blog/templates/blog/register.html:4
+#: blog/templates/blog/register.html:8
+msgid "Register"
+msgstr "S'enregistrer"
+
+#: blog/templates/blog/home.html:5
+msgid "Latest articles"
+msgstr "Derniers articles"
+
+#: blog/templates/blog/login.html:10
+msgid "Do not have account ?"
+msgstr "Vous n'avez pas encore de compte ?"
+
+#: blog/templates/blog/login.html:10
+msgid "Register now"
+msgstr "Enregistrez vous maintenant"
+
+#: blog/templates/blog/post_detail.html:6
+msgid "Author :"
+msgstr "Auteur :"
+
+#: blog/templates/blog/post_detail.html:7
+msgid "Publicated at :"
+msgstr "Publié le :"
+
+#: blog/templates/blog/post_detail.html:14
+msgid "Edit"
+msgstr "Modifier"
+
+#: blog/templates/blog/post_detail.html:15
+msgid "Delete"
+msgstr "Supprimer"
+
+#: blog/templates/blog/post_detail.html:19
+msgid "Back to the articles list"
+msgstr "Retour à la liste des articles"
+
+#: blog/templates/blog/post_form.html:5
+msgid "Add an article"
+msgstr "Ajouter un article"
+
+#: blog/templates/blog/post_form.html:9
+msgid "Add the article"
+msgstr "Ajouter l'article"
+
+#: blog/templates/blog/register.html:10
+msgid "Do already have an account ?"
+msgstr "Vous avez déja un compte ?"
+
+#: monBlog/settings.py:119
+msgid "French"
+msgstr "Français"
+
+#: monBlog/settings.py:120
+msgid "English"
+msgstr "Anglais"

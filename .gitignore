@@ -1,0 +1,78 @@
+ 
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+db.sqlite3
+db.sqlite3-journal
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+media/
+staticfiles/
+
+# Environnement virtuel
+venv/
+env/
+.venv/
+.env/
+pythonenv/
+
+# IDEs et éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers de configuration d'OS
+.DS_Store
+Thumbs.db
+
+# Fichiers de configuration Python
+*.coverage
+*.hypothesis/
+.coverage.*
+nosetests.xml
+tox.ini
+*.pdb
+
+# Fichiers de cache de Django
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Fichiers sensibles
+*.env
+*.secrets
+
+# Configuration de tests et fichiers de coverage
+.coverage
+.tox/
+.nox/
+*.coverage
+nosetests.xml
+coverage.xml
+*.coveragerc
+
+# Docker
+docker-compose.override.yml
+Dockerfile*
+
+# migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# Fichiers de distribution
+*.tar.gz
+*.zip
+*.egg
+*.egg-info/
+dist/
+build/

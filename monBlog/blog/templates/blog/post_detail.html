@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<article>
+    <h1>{{ post.title }}</h1>
+    <p><strong>{% trans "Author :" %}</strong> {{ post.author }}</p>
+    <p><strong>{% trans "Publicated at :" %}</strong> {{ post.created_at|date:"d M Y" }}</p>
+    <p>{{ post.content }}</p>
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    {% endif %}
+
+    {% if post.author == user %}
+        <a href="{% url 'post-edit' post.slug %}">{% trans "Edit" %}</a> |
+        <a href="{% url 'post-delete' post.slug %}">{% trans "Delete" %}</a>
+    {% endif %}
+</article>
+
+<a href="{% url 'post-list' %}">{% trans "Back to the articles list" %}</a>
+{% endblock %}

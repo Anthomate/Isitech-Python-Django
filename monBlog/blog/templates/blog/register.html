@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{% trans "Register" %}</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">{% trans "Register" %}</button>
+  </form>
+  <p>{% trans "Do already have an account ?" %} <a href="{% url 'login' %}">{% trans "Login" %}</a></p>
+{% endblock %}
