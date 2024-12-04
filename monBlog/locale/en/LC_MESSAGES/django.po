@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-03 13:45+0100\n"
-"PO-Revision-Date: 2024-12-03 14:06+0100\n"
-"Last-Translator:   <>\n"
+"POT-Creation-Date: 2024-12-04 12:27+0100\n"
+"PO-Revision-Date: 2024-12-04 12:28+0100\n"
+"Last-Translator:   <admin@admin.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -19,80 +19,88 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.1\n"
 
-#: blog/templates/blog/base.html:7 blog/templates/blog/base.html:14
-msgid "Blog"
-msgstr "Blog"
-
-#: blog/templates/blog/base.html:19
+#: blog/templates/blog/base.html:18
 msgid "Home"
 msgstr "Home"
 
-#: blog/templates/blog/base.html:20
-msgid "New Post"
-msgstr "New Post"
+#: blog/templates/blog/base.html:28
+msgid "Profile"
+msgstr "Profile"
 
-#: blog/templates/blog/base.html:21
+#: blog/templates/blog/base.html:29
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#: blog/templates/blog/base.html:25 blog/templates/blog/login.html:8
-#: blog/templates/blog/register.html:10
+#: blog/templates/blog/base.html:34 blog/templates/blog/login.html:9
+#: blog/templates/blog/register.html:11
 msgid "Login"
 msgstr "Login"
 
-#: blog/templates/blog/base.html:26 blog/templates/blog/register.html:4
-#: blog/templates/blog/register.html:8
+#: blog/templates/blog/base.html:35 blog/templates/blog/register.html:5
+#: blog/templates/blog/register.html:9
 msgid "Register"
 msgstr "Register"
 
-#: blog/templates/blog/home.html:5
+#: blog/templates/blog/base.html:48
+msgid "New Post"
+msgstr "New Post"
+
+#: blog/templates/blog/base.html:78
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: blog/templates/blog/base.html:80
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: blog/templates/blog/base.html:81
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#: blog/templates/blog/base.html:82
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: blog/templates/blog/home.html:7
 msgid "Latest articles"
 msgstr "Latest articles"
 
-#: blog/templates/blog/login.html:10
+#: blog/templates/blog/login.html:11
 msgid "Do not have account ?"
-msgstr "Do not have an account ?"
+msgstr "Do not have account ?"
 
-#: blog/templates/blog/login.html:10
+#: blog/templates/blog/login.html:11
 msgid "Register now"
 msgstr "Register now"
 
-#: blog/templates/blog/post_detail.html:6
+#: blog/templates/blog/post_detail.html:7
 msgid "Author :"
 msgstr "Author :"
 
-#: blog/templates/blog/post_detail.html:7
+#: blog/templates/blog/post_detail.html:8
 msgid "Publicated at :"
-msgstr "Publicated at:"
+msgstr "Publicated at :"
 
-#: blog/templates/blog/post_detail.html:14
+#: blog/templates/blog/post_detail.html:15
 msgid "Edit"
 msgstr "Edit"
 
-#: blog/templates/blog/post_detail.html:15
+#: blog/templates/blog/post_detail.html:16
 msgid "Delete"
 msgstr "Delete"
 
-#: blog/templates/blog/post_detail.html:19
+#: blog/templates/blog/post_detail.html:20
 msgid "Back to the articles list"
 msgstr "Back to the articles list"
 
-#: blog/templates/blog/post_form.html:5
+#: blog/templates/blog/post_form.html:6
 msgid "Add an article"
 msgstr "Add an article"
 
-#: blog/templates/blog/post_form.html:9
+#: blog/templates/blog/post_form.html:10
 msgid "Add the article"
 msgstr "Add the article"
 
-#: blog/templates/blog/register.html:10
+#: blog/templates/blog/register.html:11
 msgid "Do already have an account ?"
 msgstr "Do already have an account ?"
-
-#: monBlog/settings.py:119
-msgid "French"
-msgstr "French"
-
-#: monBlog/settings.py:120
-msgid "English"
-msgstr "English"

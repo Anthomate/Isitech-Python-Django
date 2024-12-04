@@ -5,16 +5,25 @@
 {% block content %}
 <div class="posts-container">
     <h1>{% trans "Latest articles" %}</h1>
-    {% for post in posts %}
+    <hr />
+    <div class="post-row">
+        {% for post in posts %}
         <div class="post-card">
-            <div class="post-header">
-                <span class="post-author">{{ post.author }}</span>
-                <span class="post-date">{% localize on %}{{ post.created_at|date:"DATE_FORMAT" }}{% endlocalize %}</span>
+            <div class="post-image" style="background-image: url('{{ post.image.url }}');">
             </div>
             <h2 class="post-title">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
             </h2>
+            <div class="post-info">
+                <span class="post-author">{{ post.author }}</span>
+                <span class="post-date">{% localize on %}{{ post.created_at|date:"DATE_FORMAT" }}{% endlocalize %}</span>
+            </div>
         </div>
-    {% endfor %}
+        {% if forloop.counter|divisibleby:2 %}
+    </div>
+    <div class="post-row">
+        {% endif %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}

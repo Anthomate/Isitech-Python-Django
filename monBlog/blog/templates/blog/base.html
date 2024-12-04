@@ -7,41 +7,67 @@
     <title>IsiBlog</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header class="navbar">
-            <div class="logo">IsiBlog</div>
-            <nav>
+    <header>
+        <nav class="navbar">
+            <div class="menu-center">
+                <a href="{% url 'post-list' %}" class="nav-link">{% trans "Home" %}</a>
+            </div>
+
+            <div class="user-menu-container">
                 {% if user.is_authenticated %}
                     <div class="user-menu">
-                        <span class="username">{{ user.username }}</span>
-                        <a href="{% url 'post-list' %}" class="nav-link">{% trans "Home" %}</a>
-                        <a href="{% url 'post-create' %}" class="nav-link create-post">{% trans "New Post" %}</a>
-                        <a href="{% url 'logout' %}" class="nav-link logout">{% trans "Disconnect" %}</a>
+                        <div class="user-profile-icon">
+                            {{ user.username|first|upper }}
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">{% trans "Profile" %}</a>
+                            <a href="{% url 'logout' %}" class="dropdown-item">{% trans "Disconnect" %}</a>
+                        </div>
                     </div>
                 {% else %}
                     <div class="auth-links">
                         <a href="{% url 'login' %}" class="nav-link">{% trans "Login" %}</a>
-                        <a href="{% url 'register' %}" class="nav-link signup">{% trans "Register" %}</a>
                     </div>
                 {% endif %}
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <main>
-            {% if messages %}
-                <div class="messages">
-                    {% for message in messages %}
-                        <div class="message {{ message.tags }}">{{ message }}</div>
-                    {% endfor %}
-                </div>
-            {% endif %}
+    <section class="hero-banner">
+        <div class="logo">IsiBlog</div>
+    </section>
 
-            {% block content %}{% endblock %}
-        </main>
+    <main>
+        {% if user.is_authenticated %}
+            <a href="{% url 'post-create' %}" class="new-post-btn">+ {% trans "New Post" %}</a>
+        {% endif %}
 
-        <div class="language-selector">
+        {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                    <div class="message {{ message.tags }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>2024 - IsiBlog. {% trans "All rights reserved." %}</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">{% trans "Privacy Policy" %}</a>
+                <a href=#" class="footer-link">{% trans "Terms of Service" %}</a>
+                <a href="#" class="footer-link">{% trans "Contact Us" %}</a>
+            </div>
+        </div>
+    </footer>
+    <div class="language-selector">
             <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
                 <input name="next" type="hidden" value="{{ request.path }}">
                 <select name="language" onchange="this.form.submit()">
@@ -56,6 +82,5 @@
                 </select>
             </form>
         </div>
-    </div>
 </body>
 </html>

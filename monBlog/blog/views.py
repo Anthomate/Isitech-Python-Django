@@ -89,6 +89,8 @@ def post_list(request):
                 post.slug = 'slug-manquant'
                 post.save()
                 slugs_corrected += 1
+            if post.image:
+                logger.info(f"Image path for post {post.id}: {post.image.path}")
 
         if slugs_corrected > 0:
             logger.warning(f"{slugs_corrected} post(s) ont eu un slug corrigé")
