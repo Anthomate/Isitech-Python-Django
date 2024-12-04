@@ -43,10 +43,6 @@
     </section>
 
     <main>
-        {% if user.is_authenticated %}
-            <a href="{% url 'post-create' %}" class="new-post-btn">+ {% trans "New Post" %}</a>
-        {% endif %}
-
         {% if messages %}
             <div class="messages">
                 {% for message in messages %}

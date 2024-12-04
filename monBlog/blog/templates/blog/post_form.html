@@ -2,12 +2,12 @@
 {% load i18n %}
 
 {% block content %}
-    <div>
-        <h2>{% trans "Add an article" %}</h2>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">{% trans "Add the article" %}</button>
-        </form>
-    </div>
+<div class="form-container">
+    <h2>{% trans "Add an Article" %}</h2>
+    <form method="post" enctype="multipart/form-data" class="styled-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="submit-btn">{% trans "Add the Article" %}</button>
+    </form>
+</div>
 {% endblock %}

@@ -111,6 +111,7 @@ def post_detail(request, slug):
         return render(request, 'blog/post_detail.html', {'post': post})
     except POST.DoesNotExist:
         logger.warning(f"Tentative d'accès à un article inexistant : {slug}")
+        messages.error(request, "L'article que vous cherchez n'existe pas.")
         raise Http404("L'article demandé n'existe pas.")
     except Exception as e:
         logger.error(f"Erreur lors de la consultation de l'article {slug} : {str(e)}", exc_info=True)
@@ -130,7 +131,7 @@ def post_create(request):
                 post.save()
                 logger.info(f"Post créé avec succès : {post.title}")
                 messages.success(request, "Votre article a été créé avec succès.")
-                return redirect('post-list')
+                return render(request, 'blog/post_form.html', {'form': form})
             else:
                 logger.warning(f"Échec de création de post : {form.errors}")
                 messages.error(request, "Erreur lors de la création de l'article. Veuillez vérifier le formulaire.")
