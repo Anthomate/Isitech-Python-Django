@@ -1,7 +1,8 @@
 import logging
 
 from django.db.models import Count
-
+from django.http import JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 from .models import POST, Category
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
@@ -20,6 +21,21 @@ auth_logger = logging.getLogger('authentication')
 ############################
 # Gestion des utilisateurs #
 ############################
+
+@login_required
+@csrf_exempt
+def toggle_favorite(request, post_id):
+    try:
+        post = get_object_or_404(POST, id=post_id)
+        if request.user in post.favorited_by.all():
+            post.favorited_by.remove(request.user)
+            is_favorited = False
+        else:
+            post.favorited_by.add(request.user)
+            is_favorited = True
+        return JsonResponse({'is_favorited': is_favorited, 'success': True})
+    except Exception as e:
+        return JsonResponse({'error': str(e), 'success': False})
 
 def register(request):
     try:
@@ -84,43 +100,33 @@ def user_logout(request):
 
 def post_list(request):
     try:
-        # Récupérer toutes les catégories pour le select
+        # Récupération des catégories
         categories = Category.objects.all()
 
-        # Filtrage des posts publiés
+        # Filtrer les posts publiés
         posts = POST.objects.filter(status='published')
 
-        # Gestion des slugs manquants avec logging
-        slugs_corrected = 0
-        for post in posts:
-            if not post.slug:
-                post.slug = 'slug-manquant'
-                post.save()
-                slugs_corrected += 1
-            if post.image:
-                logger.info(f"Image path for post {post.id}: {post.image.path}")
-
-        if slugs_corrected > 0:
-            logger.warning(f"{slugs_corrected} post(s) ont eu un slug corrigé")
-
-        # Filtrage par catégorie si une catégorie est sélectionnée
+        # Filtrage par catégorie
         selected_category = request.GET.get('category')
         if selected_category:
             posts = posts.filter(category__slug=selected_category)
 
-        test_translation = _("All rights reserved.")
-        print(f"Translation test: {test_translation}")
+        # Filtrage par favoris si l'utilisateur est connecté et choisit cette option
+        show_favorites = request.GET.get('favorites') == 'true'
+        if show_favorites and request.user.is_authenticated:
+            posts = posts.filter(favorited_by=request.user)
 
-        logger.info(f"Liste des posts chargée : {len(posts)} articles publiés")
         return render(request, 'blog/home.html', {
             'posts': posts,
             'categories': categories,
-            'selected_category': selected_category
+            'selected_category': selected_category,
+            'show_favorites': show_favorites
         })
     except Exception as e:
         logger.error(f"Erreur lors du chargement de la liste des posts : {str(e)}", exc_info=True)
         messages.error(request, "Impossible de charger la liste des articles.")
         return render(request, 'blog/home.html', {'posts': [], 'categories': []})
+
 
 
 def post_detail(request, slug):

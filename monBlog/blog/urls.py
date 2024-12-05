@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from .views import toggle_favorite
 
 urlpatterns = [
     ############################
@@ -9,6 +9,7 @@ urlpatterns = [
     path('register/', views.register, name='register'),
     path('login/', views.user_login, name='login'),
     path('logout/', views.user_logout, name='logout'),
+path('toggle-favorite/<int:post_id>/', toggle_favorite, name='toggle-favorite'),
 
     #####################
     # Gestion des posts #

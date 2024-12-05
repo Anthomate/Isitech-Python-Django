@@ -146,6 +146,7 @@ main {
     height: 200px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 
 .post-title {
@@ -483,3 +484,30 @@ a.back-link:hover {
     border: 1px solid #ccc;
     min-width: 250px;
 }
+
+.favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5em;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.favorite-btn:hover .favorite-icon.empty:before {
+    color: #f39c12;
+}
+
+.favorite-icon.empty:before {
+    content: "☆";
+}
+
+.favorite-icon.filled:before {
+    content: "★";
+    color: #f39c12;
+}
+

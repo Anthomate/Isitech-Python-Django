@@ -1,18 +1,43 @@
 {% extends "blog/base.html" %}
 {% load i18n %}
+{% load l10n %}
+
 {% block content %}
-<h1>{{ category.name }}</h1>
-<p>{{ category.description }}</p>
-<hr>
-<h2>{% trans "Articles" %}</h2>
-<ul class="post-list">
-    {% for post in posts %}
-        <li>
-            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-            <span>({{ post.created_at|date:"DATE_FORMAT" }})</span>
-        </li>
-    {% empty %}
-        <p>{% trans "No articles in this category." %}</p>
-    {% endfor %}
-</ul>
+<div class="posts-container">
+    <div class="home-header">
+        <h1>{% trans "Articles in " %}{{ category.name }}</h1>
+        <p>{{ category.description }}</p>
+    </div>
+
+    <hr />
+    {% if posts %}
+    <div class="post-row">
+        {% for post in posts %}
+        <div class="post-card">
+            <div class="post-image"
+                 style="background-image: url('{% if post.image %}{{ post.image.url }}{% else %}/static/images/default.png{% endif %}');">
+                {% if user.is_authenticated %}
+                <button class="favorite-btn" data-post-id="{{ post.id }}">
+                    <i class="favorite-icon {% if user in post.favorited_by.all %}filled{% else %}empty{% endif %}"></i>
+                </button>
+                {% endif %}
+            </div>
+            <h2 class="post-title">
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+            </h2>
+            <div class="post-info">
+                <span class="post-author">{{ post.author }}</span>
+                <span class="post-date">{% localize on %}{{ post.created_at|date:"DATE_FORMAT" }}{% endlocalize %}</span>
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:2 %}
+    </div>
+    <div class="post-row">
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>{% trans "No articles in this category." %}</p>
+    {% endif %}
+</div>
 {% endblock %}

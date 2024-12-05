@@ -16,6 +16,14 @@
                     </option>
                     {% endfor %}
                 </select>
+                {% if user.is_authenticated %}
+                <label>
+                    <input type="checkbox" name="favorites" value="true"
+                           {% if show_favorites %}checked{% endif %}
+                           onchange="this.form.submit()">
+                    {% trans "Favorites" %}
+                </label>
+                {% endif %}
             </form>
         </div>
 
@@ -31,6 +39,11 @@
         <div class="post-card">
             <div class="post-image"
                  style="background-image: url('{% if post.image %}{{ post.image.url }}{% else %}/static/images/default.png{% endif %}');">
+                {% if user.is_authenticated %}
+                <button class="favorite-btn" data-post-id="{{ post.id }}">
+                    <i class="favorite-icon {% if user in post.favorited_by.all %}filled{% else %}empty{% endif %}"></i>
+                </button>
+                {% endif %}
             </div>
             <h2 class="post-title">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
