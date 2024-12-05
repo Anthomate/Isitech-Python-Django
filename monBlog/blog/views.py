@@ -1,5 +1,5 @@
 import logging
-from .models import POST
+from .models import POST, Category
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout
@@ -7,6 +7,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.utils.translation import gettext as _
 
 # Configuration des loggers
 logger = logging.getLogger(__name__)
@@ -80,6 +81,10 @@ def user_logout(request):
 
 def post_list(request):
     try:
+        # Récupérer toutes les catégories pour le select
+        categories = Category.objects.all()
+
+        # Filtrage des posts publiés
         posts = POST.objects.filter(status='published')
 
         # Gestion des slugs manquants avec logging
@@ -95,12 +100,24 @@ def post_list(request):
         if slugs_corrected > 0:
             logger.warning(f"{slugs_corrected} post(s) ont eu un slug corrigé")
 
+        # Filtrage par catégorie si une catégorie est sélectionnée
+        selected_category = request.GET.get('category')
+        if selected_category:
+            posts = posts.filter(category__slug=selected_category)
+
+        test_translation = _("All rights reserved.")
+        print(f"Translation test: {test_translation}")
+
         logger.info(f"Liste des posts chargée : {len(posts)} articles publiés")
-        return render(request, 'blog/home.html', {'posts': posts})
+        return render(request, 'blog/home.html', {
+            'posts': posts,
+            'categories': categories,
+            'selected_category': selected_category
+        })
     except Exception as e:
         logger.error(f"Erreur lors du chargement de la liste des posts : {str(e)}", exc_info=True)
         messages.error(request, "Impossible de charger la liste des articles.")
-        return render(request, 'blog/home.html', {'posts': []})
+        return render(request, 'blog/home.html', {'posts': [], 'categories': []})
 
 
 def post_detail(request, slug):

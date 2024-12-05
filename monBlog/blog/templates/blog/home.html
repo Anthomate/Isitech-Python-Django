@@ -4,9 +4,26 @@
 
 {% block content %}
 <div class="posts-container">
-    {% if user.is_authenticated %}
-        <a href="{% url 'post-create' %}" class="new-post-btn">+ {% trans "New Post" %}</a>
-    {% endif %}
+    <div class="home-header">
+        <div class="category-filter">
+            <form method="get" action="{% url 'post-list' %}">
+                <select name="category" onchange="this.form.submit()">
+                    <option value="">{% trans "All categories" %}</option>
+                    {% for category in categories %}
+                    <option value="{{ category.slug }}"
+                            {% if selected_category == category.slug %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </form>
+        </div>
+
+        {% if user.is_authenticated %}
+            <a href="{% url 'post-create' %}" class="new-post-btn">{% trans "New Post" %}</a>
+        {% endif %}
+    </div>
+
     <h1>{% trans "Latest articles" %}</h1>
     <hr />
     <div class="post-row">

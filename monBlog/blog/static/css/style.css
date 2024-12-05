@@ -458,3 +458,28 @@ a.back-link:hover {
     background-color: #c99400;
     transform: translateY(2px);
 }
+
+.home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
+.category-filter {
+    display: flex;
+    align-items: center;
+}
+
+.category-filter form {
+    margin: 0;
+}
+
+.category-filter select {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    min-width: 250px;
+}

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-04 12:27+0100\n"
-"PO-Revision-Date: 2024-12-04 12:28+0100\n"
+"POT-Creation-Date: 2024-12-05 09:10+0100\n"
+"PO-Revision-Date: 2024-12-04 20:56+0100\n"
 "Last-Translator:   <admin@admin.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -25,82 +25,85 @@ msgstr "Home"
 
 #: blog/templates/blog/base.html:28
 msgid "Profile"
-msgstr "Profile"
+msgstr "Profilo"
 
 #: blog/templates/blog/base.html:29
 msgid "Disconnect"
-msgstr "Disconnect"
+msgstr "Disconnettersi"
 
-#: blog/templates/blog/base.html:34 blog/templates/blog/login.html:9
-#: blog/templates/blog/register.html:11
+#: blog/templates/blog/base.html:34 blog/templates/blog/login.html:6
+#: blog/templates/blog/login.html:12 blog/templates/blog/register.html:11
 msgid "Login"
-msgstr "Login"
+msgstr "Accedi"
 
-#: blog/templates/blog/base.html:35 blog/templates/blog/register.html:5
-#: blog/templates/blog/register.html:9
-msgid "Register"
-msgstr "Register"
-
-#: blog/templates/blog/base.html:48
-msgid "New Post"
-msgstr "New Post"
-
-#: blog/templates/blog/base.html:78
+#: blog/templates/blog/base.html:50 blog/views.py:108
 msgid "All rights reserved."
-msgstr "All rights reserved."
+msgstr "Tutti i diritti riservati."
 
-#: blog/templates/blog/base.html:80
+#: blog/templates/blog/base.html:52
 msgid "Privacy Policy"
-msgstr "Privacy Policy"
+msgstr "Politica sulla privacy"
 
-#: blog/templates/blog/base.html:81
+#: blog/templates/blog/base.html:53
 msgid "Terms of Service"
-msgstr "Terms of Service"
+msgstr "Termini di servizio"
 
-#: blog/templates/blog/base.html:82
+#: blog/templates/blog/base.html:54
 msgid "Contact Us"
-msgstr "Contact Us"
+msgstr "Contattaci"
 
-#: blog/templates/blog/home.html:7
+#: blog/templates/blog/home.html:11
+msgid "All categories"
+msgstr "Tutte le categorie"
+
+#: blog/templates/blog/home.html:23
+msgid "New Post"
+msgstr "Nuovo articolo"
+
+#: blog/templates/blog/home.html:27
 msgid "Latest articles"
-msgstr "Latest articles"
+msgstr "Ultimi articoli"
 
-#: blog/templates/blog/login.html:11
-msgid "Do not have account ?"
-msgstr "Do not have account ?"
+#: blog/templates/blog/login.html:14
+msgid "Do not have an account?"
+msgstr "Non hai un account?"
 
-#: blog/templates/blog/login.html:11
+#: blog/templates/blog/login.html:14
 msgid "Register now"
-msgstr "Register now"
+msgstr "Registrati ora"
 
 #: blog/templates/blog/post_detail.html:7
 msgid "Author :"
-msgstr "Author :"
+msgstr "Autore :"
 
 #: blog/templates/blog/post_detail.html:8
 msgid "Publicated at :"
-msgstr "Publicated at :"
+msgstr "Pubblicato il :"
 
 #: blog/templates/blog/post_detail.html:15
 msgid "Edit"
-msgstr "Edit"
+msgstr "Modifica"
 
 #: blog/templates/blog/post_detail.html:16
 msgid "Delete"
-msgstr "Delete"
+msgstr "Elimina"
 
 #: blog/templates/blog/post_detail.html:20
 msgid "Back to the articles list"
-msgstr "Back to the articles list"
+msgstr "Torna alla lista degli articoli"
 
 #: blog/templates/blog/post_form.html:6
-msgid "Add an article"
-msgstr "Add an article"
+msgid "Add an Article"
+msgstr "Aggiungi un articolo"
 
 #: blog/templates/blog/post_form.html:10
-msgid "Add the article"
-msgstr "Add the article"
+msgid "Add the Article"
+msgstr "Aggiungi l'articolo"
+
+#: blog/templates/blog/register.html:5 blog/templates/blog/register.html:9
+msgid "Register"
+msgstr "Registrati"
 
 #: blog/templates/blog/register.html:11
 msgid "Do already have an account ?"
-msgstr "Do already have an account ?"
+msgstr "Hai già un account?"
