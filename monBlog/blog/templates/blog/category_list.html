@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% load i18n %}
+{% block content %}
+<h1>{% trans "Categories" %}</h1>
+<hr>
+<ul class="category-list">
+    {% for category in categories %}
+        <li>
+            <h2>
+                <a href="{% url 'category-detail' category.slug %}">{{ category.name }}</a>
+            </h2>
+            <p>{{ category.article_count }} {% trans "articles" %}</p>
+        </li>
+    {% empty %}
+        <p>{% trans "No categories available." %}</p>
+    {% endfor %}
+</ul>
+{% endblock %}

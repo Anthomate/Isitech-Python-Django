@@ -1,4 +1,7 @@
 import logging
+
+from django.db.models import Count
+
 from .models import POST, Category
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
@@ -215,3 +218,15 @@ def post_delete(request, slug):
         logger.error(f"Erreur lors de la suppression de l'article {slug} : {str(e)}", exc_info=True)
         messages.error(request, "Une erreur est survenue lors de la suppression de l'article.")
         return redirect('post-list')
+
+def category_list(request):
+    categories = Category.objects.annotate(article_count=Count('post')).order_by('name')
+    return render(request, 'blog/category_list.html', {'categories': categories})
+
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = category.post.filter(status='published').order_by('-created_at')
+    return render(request, 'blog/category_detail.html', {
+        'category': category,
+        'posts': posts,
+    })
