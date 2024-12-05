@@ -78,9 +78,17 @@ AUTH_PASSWORD_VALIDATORS = [
 LANGUAGE_CODE = 'fr'
 
 LANGUAGES = [
+    ('da', 'Dansk'),
+    ('de', 'Deutsch'),
     ('en', 'English'),
+    ('es', 'Español'),
     ('fr', 'French'),
     ('it', 'Italian'),
+    ('nl', 'Nederlands'),
+    ('pt', 'Português'),
+    ('ru', 'Русский'),
+    ('sv', 'Svenska'),
+    ('he', 'עברית'),
 ]
 
 TIME_ZONE = 'Europe/Paris'

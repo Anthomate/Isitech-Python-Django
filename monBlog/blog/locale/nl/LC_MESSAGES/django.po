@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-05 11:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: blog/forms.py:10
+msgid "Title"
+msgstr "Titel"
+
+#: blog/forms.py:11
+msgid "Content"
+msgstr "Inhoud"
+
+#: blog/forms.py:12
+msgid "Category"
+msgstr "Categorie"
+
+#: blog/forms.py:13
+msgid "Tags"
+msgstr "Tags"
+
+#: blog/forms.py:14
+msgid "Image"
+msgstr "Afbeelding"
+
+#: blog/forms.py:15
+msgid "Status"
+msgstr "Status"
+
+#: blog/forms.py:18
+msgid "Enter the title of your article."
+msgstr "Voer de titel van je artikel in."
+
+#: blog/forms.py:19
+msgid "Write the content of your article."
+msgstr "Schrijf de inhoud van je artikel."
+
+#: blog/templates/blog/base.html:18
+msgid "Home"
+msgstr "Home"
+
+#: blog/templates/blog/base.html:19 blog/templates/blog/category_list.html:5
+msgid "Categories"
+msgstr "Categorieën"
+
+#: blog/templates/blog/base.html:29
+msgid "Profile"
+msgstr "Profiel"
+
+#: blog/templates/blog/base.html:31
+msgid "Disconnect"
+msgstr "Afmelden"
+
+#: blog/templates/blog/base.html:36 blog/templates/blog/login.html:6
+#: blog/templates/blog/login.html:12 blog/templates/blog/register.html:11
+msgid "Login"
+msgstr "Inloggen"
+
+#: blog/templates/blog/base.html:52
+msgid "All rights reserved."
+msgstr "Alle rechten voorbehouden."
+
+#: blog/templates/blog/base.html:54
+msgid "Privacy Policy"
+msgstr "Privacybeleid"
+
+#: blog/templates/blog/base.html:55
+msgid "Terms of Service"
+msgstr "Servicevoorwaarden"
+
+#: blog/templates/blog/base.html:56
+msgid "Contact Us"
+msgstr "Contacteer ons"
+
+#: blog/templates/blog/category_detail.html:8
+msgid "Articles in "
+msgstr "Artikelen in "
+
+#: blog/templates/blog/category_detail.html:40
+msgid "No articles in this category."
+msgstr "Geen artikelen in deze categorie."
+
+#: blog/templates/blog/category_list.html:13
+msgid "articles"
+msgstr "artikelen"
+
+#: blog/templates/blog/category_list.html:16
+msgid "No categories available."
+msgstr "Geen categorieën beschikbaar."
+
+#: blog/templates/blog/home.html:12
+msgid "All categories"
+msgstr "Alle categorieën"
+
+#: blog/templates/blog/home.html:27
+msgid "Favorites"
+msgstr "Favorieten"
+
+#: blog/templates/blog/home.html:34
+msgid "New Post"
+msgstr "Nieuwe post"
+
+#: blog/templates/blog/home.html:38
+msgid "Latest articles"
+msgstr "Laatste artikelen"
+
+#: blog/templates/blog/login.html:14
+msgid "Do not have an account?"
+msgstr "Heb je geen account?"
+
+#: blog/templates/blog/login.html:14
+msgid "Register now"
+msgstr "Registreer nu"
+
+#: blog/templates/blog/post_detail.html:7
+msgid "Author :"
+msgstr "Auteur :"
+
+#: blog/templates/blog/post_detail.html:8
+msgid "Publicated at :"
+msgstr "Gepubliceerd op :"
+
+#: blog/templates/blog/post_detail.html:15
+msgid "Edit"
+msgstr "Bewerken"
+
+#: blog/templates/blog/post_detail.html:16
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: blog/templates/blog/post_detail.html:20
+msgid "Back to the articles list"
+msgstr "Terug naar de artikelenlijst"
+
+#: blog/templates/blog/post_form.html:6
+msgid "Add an Article"
+msgstr "Voeg een artikel toe"
+
+#: blog/templates/blog/post_form.html:10
+msgid "Add the Article"
+msgstr "Voeg het artikel toe"
+
+#: blog/templates/blog/register.html:5 blog/templates/blog/register.html:9
+msgid "Register"
+msgstr "Registreren"
+
+#: blog/templates/blog/register.html:11
+msgid "Do already have an account ?"
+msgstr "Heb je al een account?"

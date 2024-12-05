@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-05 11:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: blog/forms.py:10
+msgid "Title"
+msgstr "Titel"
+
+#: blog/forms.py:11
+msgid "Content"
+msgstr "Inhalt"
+
+#: blog/forms.py:12
+msgid "Category"
+msgstr "Kategorie"
+
+#: blog/forms.py:13
+msgid "Tags"
+msgstr "Tags"
+
+#: blog/forms.py:14
+msgid "Image"
+msgstr "Bild"
+
+#: blog/forms.py:15
+msgid "Status"
+msgstr "Status"
+
+#: blog/forms.py:18
+msgid "Enter the title of your article."
+msgstr "Geben Sie den Titel Ihres Artikels ein."
+
+#: blog/forms.py:19
+msgid "Write the content of your article."
+msgstr "Schreiben Sie den Inhalt Ihres Artikels."
+
+#: blog/templates/blog/base.html:18
+msgid "Home"
+msgstr "Startseite"
+
+#: blog/templates/blog/base.html:19 blog/templates/blog/category_list.html:5
+msgid "Categories"
+msgstr "Kategorien"
+
+#: blog/templates/blog/base.html:29
+msgid "Profile"
+msgstr "Profil"
+
+#: blog/templates/blog/base.html:31
+msgid "Disconnect"
+msgstr "Abmelden"
+
+#: blog/templates/blog/base.html:36 blog/templates/blog/login.html:6
+#: blog/templates/blog/login.html:12 blog/templates/blog/register.html:11
+msgid "Login"
+msgstr "Einloggen"
+
+#: blog/templates/blog/base.html:52
+msgid "All rights reserved."
+msgstr "Alle Rechte vorbehalten."
+
+#: blog/templates/blog/base.html:54
+msgid "Privacy Policy"
+msgstr "Datenschutzrichtlinie"
+
+#: blog/templates/blog/base.html:55
+msgid "Terms of Service"
+msgstr "Nutzungsbedingungen"
+
+#: blog/templates/blog/base.html:56
+msgid "Contact Us"
+msgstr "Kontaktieren Sie uns"
+
+#: blog/templates/blog/category_detail.html:8
+msgid "Articles in "
+msgstr "Artikel in "
+
+#: blog/templates/blog/category_detail.html:40
+msgid "No articles in this category."
+msgstr "Keine Artikel in dieser Kategorie."
+
+#: blog/templates/blog/category_list.html:13
+msgid "articles"
+msgstr "Artikel"
+
+#: blog/templates/blog/category_list.html:16
+msgid "No categories available."
+msgstr "Keine Kategorien verfügbar."
+
+#: blog/templates/blog/home.html:12
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+#: blog/templates/blog/home.html:27
+msgid "Favorites"
+msgstr "Favoriten"
+
+#: blog/templates/blog/home.html:34
+msgid "New Post"
+msgstr "Neuer Beitrag"
+
+#: blog/templates/blog/home.html:38
+msgid "Latest articles"
+msgstr "Neueste Artikel"
+
+#: blog/templates/blog/login.html:14
+msgid "Do not have an account?"
+msgstr "Haben Sie kein Konto?"
+
+#: blog/templates/blog/login.html:14
+msgid "Register now"
+msgstr "Jetzt registrieren"
+
+#: blog/templates/blog/post_detail.html:7
+msgid "Author :"
+msgstr "Autor :"
+
+#: blog/templates/blog/post_detail.html:8
+msgid "Publicated at :"
+msgstr "Veröffentlicht am :"
+
+#: blog/templates/blog/post_detail.html:15
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: blog/templates/blog/post_detail.html:16
+msgid "Delete"
+msgstr "Löschen"
+
+#: blog/templates/blog/post_detail.html:20
+msgid "Back to the articles list"
+msgstr "Zurück zur Artikelübersicht"
+
+#: blog/templates/blog/post_form.html:6
+msgid "Add an Article"
+msgstr "Artikel hinzufügen"
+
+#: blog/templates/blog/post_form.html:10
+msgid "Add the Article"
+msgstr "Artikel hinzufügen"
+
+#: blog/templates/blog/register.html:5 blog/templates/blog/register.html:9
+msgid "Register"
+msgstr "Registrieren"
+
+#: blog/templates/blog/register.html:11
+msgid "Do already have an account ?"
+msgstr "Haben Sie bereits ein Konto?"

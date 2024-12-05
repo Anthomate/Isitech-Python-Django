@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-05 11:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: blog/forms.py:10
+msgid "Title"
+msgstr "Titel"
+
+#: blog/forms.py:11
+msgid "Content"
+msgstr "Innehåll"
+
+#: blog/forms.py:12
+msgid "Category"
+msgstr "Kategori"
+
+#: blog/forms.py:13
+msgid "Tags"
+msgstr "Taggar"
+
+#: blog/forms.py:14
+msgid "Image"
+msgstr "Bild"
+
+#: blog/forms.py:15
+msgid "Status"
+msgstr "Status"
+
+#: blog/forms.py:18
+msgid "Enter the title of your article."
+msgstr "Skriv in titeln på din artikel."
+
+#: blog/forms.py:19
+msgid "Write the content of your article."
+msgstr "Skriv innehållet i din artikel."
+
+#: blog/templates/blog/base.html:18
+msgid "Home"
+msgstr "Hem"
+
+#: blog/templates/blog/base.html:19 blog/templates/blog/category_list.html:5
+msgid "Categories"
+msgstr "Kategorier"
+
+#: blog/templates/blog/base.html:29
+msgid "Profile"
+msgstr "Profil"
+
+#: blog/templates/blog/base.html:31
+msgid "Disconnect"
+msgstr "Koppla bort"
+
+#: blog/templates/blog/base.html:36 blog/templates/blog/login.html:6
+#: blog/templates/blog/login.html:12 blog/templates/blog/register.html:11
+msgid "Login"
+msgstr "Logga in"
+
+#: blog/templates/blog/base.html:52
+msgid "All rights reserved."
+msgstr "Alla rättigheter förbehållna."
+
+#: blog/templates/blog/base.html:54
+msgid "Privacy Policy"
+msgstr "Integritetspolicy"
+
+#: blog/templates/blog/base.html:55
+msgid "Terms of Service"
+msgstr "Användarvillkor"
+
+#: blog/templates/blog/base.html:56
+msgid "Contact Us"
+msgstr "Kontakta oss"
+
+#: blog/templates/blog/category_detail.html:8
+msgid "Articles in "
+msgstr "Artiklar i "
+
+#: blog/templates/blog/category_detail.html:40
+msgid "No articles in this category."
+msgstr "Inga artiklar i denna kategori."
+
+#: blog/templates/blog/category_list.html:13
+msgid "articles"
+msgstr "artiklar"
+
+#: blog/templates/blog/category_list.html:16
+msgid "No categories available."
+msgstr "Inga kategorier tillgängliga."
+
+#: blog/templates/blog/home.html:12
+msgid "All categories"
+msgstr "Alla kategorier"
+
+#: blog/templates/blog/home.html:27
+msgid "Favorites"
+msgstr "Favoriter"
+
+#: blog/templates/blog/home.html:34
+msgid "New Post"
+msgstr "Ny post"
+
+#: blog/templates/blog/home.html:38
+msgid "Latest articles"
+msgstr "Senaste artiklar"
+
+#: blog/templates/blog/login.html:14
+msgid "Do not have an account?"
+msgstr "Har du inget konto?"
+
+#: blog/templates/blog/login.html:14
+msgid "Register now"
+msgstr "Registrera dig nu"
+
+#: blog/templates/blog/post_detail.html:7
+msgid "Author :"
+msgstr "Författare :"
+
+#: blog/templates/blog/post_detail.html:8
+msgid "Publicated at :"
+msgstr "Publicerad den :"
+
+#: blog/templates/blog/post_detail.html:15
+msgid "Edit"
+msgstr "Redigera"
+
+#: blog/templates/blog/post_detail.html:16
+msgid "Delete"
+msgstr "Ta bort"
+
+#: blog/templates/blog/post_detail.html:20
+msgid "Back to the articles list"
+msgstr "Tillbaka till artikellistan"
+
+#: blog/templates/blog/post_form.html:6
+msgid "Add an Article"
+msgstr "Lägg till en artikel"
+
+#: blog/templates/blog/post_form.html:10
+msgid "Add the Article"
+msgstr "Lägg till artikeln"
+
+#: blog/templates/blog/register.html:5 blog/templates/blog/register.html:9
+msgid "Register"
+msgstr "Registrera"
+
+#: blog/templates/blog/register.html:11
+msgid "Do already have an account ?"
+msgstr "Har du redan ett konto?"
