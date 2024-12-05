@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-05 09:37+0100\n"
+"POT-Creation-Date: 2024-12-05 11:29+0100\n"
 "PO-Revision-Date: 2024-12-04 20:51+0100\n"
 "Last-Translator:   <admin@admin.fr>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,44 +55,72 @@ msgstr ""
 msgid "Home"
 msgstr "Home"
 
-#: blog/templates/blog/base.html:28
+#: blog/templates/blog/base.html:19 blog/templates/blog/category_list.html:5
+#, fuzzy
+#| msgid "All categories"
+msgid "Categories"
+msgstr "All categories"
+
+#: blog/templates/blog/base.html:29
 msgid "Profile"
 msgstr "Profile"
 
-#: blog/templates/blog/base.html:29
+#: blog/templates/blog/base.html:31
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#: blog/templates/blog/base.html:34 blog/templates/blog/login.html:6
+#: blog/templates/blog/base.html:36 blog/templates/blog/login.html:6
 #: blog/templates/blog/login.html:12 blog/templates/blog/register.html:11
 msgid "Login"
 msgstr "Login"
 
-#: blog/templates/blog/base.html:50 blog/views.py:108
+#: blog/templates/blog/base.html:52
 msgid "All rights reserved."
 msgstr "All rights reserved."
 
-#: blog/templates/blog/base.html:52
+#: blog/templates/blog/base.html:54
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
-#: blog/templates/blog/base.html:53
+#: blog/templates/blog/base.html:55
 msgid "Terms of Service"
 msgstr "Terms of Service"
 
-#: blog/templates/blog/base.html:54
+#: blog/templates/blog/base.html:56
 msgid "Contact Us"
 msgstr "Contact Us"
 
-#: blog/templates/blog/home.html:11
+#: blog/templates/blog/category_detail.html:8
+msgid "Articles in "
+msgstr ""
+
+#: blog/templates/blog/category_detail.html:40
+msgid "No articles in this category."
+msgstr ""
+
+#: blog/templates/blog/category_list.html:13
+#, fuzzy
+#| msgid "Latest articles"
+msgid "articles"
+msgstr "Latest articles"
+
+#: blog/templates/blog/category_list.html:16
+msgid "No categories available."
+msgstr ""
+
+#: blog/templates/blog/home.html:12
 msgid "All categories"
 msgstr "All categories"
 
-#: blog/templates/blog/home.html:23
+#: blog/templates/blog/home.html:27
+msgid "Favorites"
+msgstr ""
+
+#: blog/templates/blog/home.html:34
 msgid "New Post"
 msgstr "New Post"
 
-#: blog/templates/blog/home.html:27
+#: blog/templates/blog/home.html:38
 msgid "Latest articles"
 msgstr "Latest articles"
 

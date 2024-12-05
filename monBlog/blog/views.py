@@ -11,9 +11,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.utils.translation import gettext as _
 
-# Configuration des loggers
 logger = logging.getLogger(__name__)
 auth_logger = logging.getLogger('authentication')
 
@@ -100,18 +98,14 @@ def user_logout(request):
 
 def post_list(request):
     try:
-        # Récupération des catégories
         categories = Category.objects.all()
 
-        # Filtrer les posts publiés
         posts = POST.objects.filter(status='published')
 
-        # Filtrage par catégorie
         selected_category = request.GET.get('category')
         if selected_category:
             posts = posts.filter(category__slug=selected_category)
 
-        # Filtrage par favoris si l'utilisateur est connecté et choisit cette option
         show_favorites = request.GET.get('favorites') == 'true'
         if show_favorites and request.user.is_authenticated:
             posts = posts.filter(favorited_by=request.user)

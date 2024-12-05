@@ -1,7 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
-from django.utils import timezone
 from django.utils.text import slugify
 
 
@@ -52,5 +51,5 @@ class POST(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title)  # Génère un slug basé sur le titre
+            self.slug = slugify(self.title)
         super().save(*args, **kwargs)

@@ -6,20 +6,23 @@
 <div class="posts-container">
     <div class="home-header">
         <div class="category-filter">
-            <form method="get" action="{% url 'post-list' %}">
-                <select name="category" onchange="this.form.submit()">
-                    <option value="">{% trans "All categories" %}</option>
-                    {% for category in categories %}
-                    <option value="{{ category.slug }}"
-                            {% if selected_category == category.slug %}selected{% endif %}>
-                        {{ category.name }}
-                    </option>
-                    {% endfor %}
-                </select>
+            <form method="get" action="{% url 'post-list' %}" class="filter-form">
+                <div class="filter-select-container">
+                    <select name="category" class="styled-select" onchange="this.form.submit()">
+                        <option value="">{% trans "All categories" %}</option>
+                        {% for category in categories %}
+                        <option value="{{ category.slug }}"
+                                {% if selected_category == category.slug %}selected{% endif %}>
+                            {{ category.name }}
+                        </option>
+                        {% endfor %}
+                    </select>
+                </div>
+
                 {% if user.is_authenticated %}
-                <label>
+                <label class="styled-checkbox-label">
                     <input type="checkbox" name="favorites" value="true"
-                           {% if show_favorites %}checked{% endif %}
+                           class="styled-checkbox" {% if show_favorites %}checked{% endif %}
                            onchange="this.form.submit()">
                     {% trans "Favorites" %}
                 </label>

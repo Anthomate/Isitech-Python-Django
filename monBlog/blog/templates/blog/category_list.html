@@ -1,18 +1,20 @@
 {% extends "blog/base.html" %}
 {% load i18n %}
 {% block content %}
-<h1>{% trans "Categories" %}</h1>
-<hr>
-<ul class="category-list">
-    {% for category in categories %}
-        <li>
+<div class="categories-container">
+    <h1>{% trans "Categories" %}</h1>
+    <hr>
+    <div class="category-grid">
+        {% for category in categories %}
+        <div class="category-card">
             <h2>
                 <a href="{% url 'category-detail' category.slug %}">{{ category.name }}</a>
             </h2>
             <p>{{ category.article_count }} {% trans "articles" %}</p>
-        </li>
-    {% empty %}
-        <p>{% trans "No categories available." %}</p>
-    {% endfor %}
-</ul>
+        </div>
+        {% empty %}
+        <p class="no-categories">{% trans "No categories available." %}</p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
