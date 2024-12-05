@@ -29,7 +29,8 @@
     <div class="post-row">
         {% for post in posts %}
         <div class="post-card">
-            <div class="post-image" style="background-image: url('{{ post.image.url }}');">
+            <div class="post-image"
+                 style="background-image: url('{% if post.image %}{{ post.image.url }}{% else %}/static/images/default.png{% endif %}');">
             </div>
             <h2 class="post-title">
                 <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
