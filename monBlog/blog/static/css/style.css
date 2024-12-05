@@ -685,3 +685,42 @@ a.back-link:hover {
     content: "★";
     color: #f39c12;
 }
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.toast {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    color: #333;
+    margin-bottom: 10px;
+    max-width: 350px;
+    opacity: 0;
+    padding: 15px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.toast.success {
+    border-left: 4px solid #4CAF50;
+    background-color: #E8F5E9;
+}
+.toast.error {
+    border-left: 4px solid #F44336;
+    background-color: #FFEBEE;
+}
+.toast.warning {
+    border-left: 4px solid #FF9800;
+    background-color: #FFF3E0;
+}
+.toast.info {
+    border-left: 4px solid #2196F3;
+    background-color: #E3F2FD;
+}
